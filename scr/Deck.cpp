@@ -256,4 +256,48 @@ void Deck::init(void)
 void Deck::shuffleDeck(void)
 {
 	//RESEARCH CARD SHUFFLEING ALGORITHUM
+	
+	int random = 0 ;
+	int random2 = 0 ;	
+	
+	Card* temp = NULL ;
+	
+	for(int i = 0 ; i < 500 ; i++)
+	{
+		random = rand() % this->MAX_NO_OF_CARDS ;
+		random2 = rand() % this->MAX_NO_OF_CARDS ;
+		
+		temp = this->deck[random] ;
+		this->deck[random] = this->deck[random2] ;
+		this->deck[random2] = temp ;
+	}
+}
+
+Card* Deck::getTopCard(void)
+{
+	int i = 0 ;
+	Card* temp = NULL ;
+	
+	while(this->deck[i] != NULL) //Loops around until it finds the the card after the top card
+	{
+		i++ ;
+		
+		if(i == this->MAX_NO_OF_CARDS)
+		{
+			temp = this->deck[this->MAX_NO_OF_CARDS] ; //Store the top card of the deck
+			this->this->deck[this->MAX_NO_OF_CARDS] = NULL ; //Remove the top card from the deck
+			return temp ; //Return the top card
+		}
+	}
+	
+	if(i == 0)
+	{
+		return NULL ; //There are no cards in the deck
+	}
+	else
+	{
+		temp = this->deck[(i - 1)] ; //Store the top card of the deck
+		this->deck[(i - 1)] = NULL ; //Remove the top card from the deck
+		return temp ; //Return the top card
+	}
 }

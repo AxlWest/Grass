@@ -34,6 +34,8 @@ int main(int* argc , char* argv[])
 		cout << "* Failed ... Card type not initialized correctly *" << endl ;
 	}
 	
+	currentTest++ ;
+	
 	cout << "*                                                *" << endl ;
 	cout << "* Test no: " << currentTest << "                                      *" << endl ;
 	cout << "* Setting the cards type                         *" << endl ;
@@ -50,6 +52,8 @@ int main(int* argc , char* argv[])
 		cout << "*                                                *" << endl ;
 		cout << "* Passed                                         *" << endl ;
 	}
+	
+	currentTest++ ;
 	
 	cout << "*                                                *" << endl ;
 	cout << "* Test no: " << currentTest << "                                      *" << endl ;

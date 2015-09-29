@@ -1,4 +1,4 @@
-#include "Card"
+#include "Card.h"
 
 //Class creation methods
 Card::Card(void)

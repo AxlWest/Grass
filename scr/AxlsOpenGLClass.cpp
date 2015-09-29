@@ -9,6 +9,11 @@ AxlsOpenGLClass::AxlsOpenGLClass(void)
 
 AxlsOpenGLClass::~AxlsOpenGLClass(void)
 {
+	if(this->renderEngine != NULL)
+	{
+		delete this->renderEngine ;
+		this->renderEngine = NULL ;
+	}
 }
 
 void AxlsOpenGLClass::init(void)

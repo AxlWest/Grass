@@ -285,7 +285,7 @@ Card* Deck::getTopCard(void)
 		if(i == this->MAX_NO_OF_CARDS)
 		{
 			temp = this->deck[this->MAX_NO_OF_CARDS] ; //Store the top card of the deck
-			this->this->deck[this->MAX_NO_OF_CARDS] = NULL ; //Remove the top card from the deck
+			this->deck[this->MAX_NO_OF_CARDS] = NULL ; //Remove the top card from the deck
 			return temp ; //Return the top card
 		}
 	}

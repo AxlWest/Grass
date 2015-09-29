@@ -8,6 +8,8 @@ class Game
 {
 	private :
 
+		bool SplashScreenBool ;
+
 		BitmapLoader* bitmapLoader ;
 		Background* splashScreen ;
 		RenderEngine* renderEngine ;
@@ -18,5 +20,7 @@ class Game
 		Game(RenderEngine* renderEngine) ;
 		~Game(void) ;
 		void init(void) ;
+
+		void gameInput(unsigned char key , int x , int y) ;
 } ;
 
